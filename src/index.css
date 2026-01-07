@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply min-h-screen font-sans;
+  }
+
+  /* Form input'ları için tutarlı focus ring'i (Tailwind'in default ring rengi pek belirgin değil). */
+  input:focus-visible,
+  button:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  /* Tekrar eden uzun class zincirlerini buraya çek. Şimdilik minimal. */
+}
