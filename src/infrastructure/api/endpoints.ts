@@ -17,4 +17,10 @@ export const endpoints = {
     create: '/users',
     getById: (id: string) => `/users/${id}`,
   },
+  todos: {
+    list: '/todos',
+    create: '/todos',
+    toggle: (id: string) => `/todos/${id}/toggle`,
+    delete: (id: string) => `/todos/${id}`,
+  },
 } as const;
