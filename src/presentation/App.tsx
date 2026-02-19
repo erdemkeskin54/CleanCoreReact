@@ -9,6 +9,7 @@ import { LoginPage } from '@presentation/pages/LoginPage';
 import { RegisterPage } from '@presentation/pages/RegisterPage';
 import { DashboardPage } from '@presentation/pages/DashboardPage';
 import { UserDetailPage } from '@presentation/pages/UserDetailPage';
+import { TodosPage } from '@presentation/pages/TodosPage';
 import { NotFoundPage } from '@presentation/pages/NotFoundPage';
 
 // =============================================================================
@@ -36,6 +37,7 @@ const App = () => {
         {/* Auth gerektiren */}
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/todos" element={<TodosPage />} />
           <Route path="/users/:id" element={<UserDetailPage />} />
         </Route>
 

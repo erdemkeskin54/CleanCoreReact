@@ -27,6 +27,9 @@ export const Header = () => {
               <Link to="/dashboard" className="text-sm text-slate-600 hover:text-slate-900">
                 Panel
               </Link>
+              <Link to="/todos" className="text-sm text-slate-600 hover:text-slate-900">
+                Görevler
+              </Link>
               <Button variant="ghost" size="sm" onClick={handleLogout} isLoading={logout.isPending}>
                 Çıkış
               </Button>
