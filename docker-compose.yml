@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cleancore-react:latest
+    container_name: cleancore-react
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      # Build sırasında zaten env var'lar inline'lanıyor (Vite static bundle).
+      # Bu env var'lar nginx için runtime — şimdilik kullanılmıyor.
+      TZ: Europe/Istanbul
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
